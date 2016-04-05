@@ -1,26 +1,33 @@
 {{#if updateQuestionForm}}
   <h4>Update {{question.owner}}'s question</h4>
-    <div>
-      <form>
-        <div class="form-group">
-          <label for="title">Question</label>
-          {{input value=title id="title" placeholder=question.title}}
-        </div>
-
-        <div class="form-group">
-          <label for="author">Author</label>
-          {{input value=author id="author" placeholder=question.author}}
-        </div>
-
-        <div class="form-group">
-          <label for="notes">Notes</label>
+  <div class="row">
+   <form class="col s12">
+     <div class="row">
+       <div class="input-field col s6">
+         <label for="author">Author</label>
+         <br>
+         {{input value=author id="author" placeholder=question.author}}
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s12">
+         <label for="title">Question</label>
+         <br>
+         {{input value=title id="title" placeholder=question.title}}
+       </div>
+     </div>
+     <div class="row">
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="notes">notes</label>
           <br>
-          {{textarea value=notes id="notes" placeholder=question.notes}}
+          {{textarea value=notes id="notes" placeholder=question.notes class="materialize-textarea"}}
         </div>
-
-        <button class="waves-effect waves-light btn green" {{action 'update' question}}>Save</button>
-      </form>
+      </div>
     </div>
+      <button class="waves-effect waves-light btn green" {{action 'update' question}}>Save</button>
+   </form>
+ </div>
 {{else}}
     <button class="waves-effect waves-light btn blue" {{action 'updateQuestionForm'}}>Update</button>
 {{/if}}
