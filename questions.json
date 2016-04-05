@@ -1,0 +1,17 @@
+{ "questions":
+  [{
+    "title": "Ember?",
+    "author": "Joe",
+    "notes": "What is ember and why is it so stupid?"
+  },
+  {
+    "title": "React",
+    "author": "Mike",
+    "notes": "What is react?"
+  },
+  {
+    "title": "Spain?",
+    "author": "Sara",
+    "notes": "Best cities to visit in Spain?"
+  }]
+}
