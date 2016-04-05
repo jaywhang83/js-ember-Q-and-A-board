@@ -1,5 +1,11 @@
-<h2 id="title">Welcome to Ember.js</h2>
-{{#link-to 'index'}}Home{{/link-to}}
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Q and A</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li>{{#link-to 'index'}}Home{{/link-to}}</li>
+    </ul>
+  </div>
+</nav>
 {{outlet}}
 
 {{!-- ember-cli-materialize modal container --}}
