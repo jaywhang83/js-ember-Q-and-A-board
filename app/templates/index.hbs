@@ -1,12 +1,13 @@
 <h4>Welcome to Q and A</h4>
 
 Ask question and get answers!!!
-
+<h5>Questions</h5>
 <ul>
   {{#each model as |question|}}
     <h5>{{#link-to 'question' question.id}}{{question.title}}<br>{{question.author}}{{/link-to}}</h5>
   {{/each}}
 </ul>
 
+<h5>Answers</h5>
 
 {{new-question saveQuestion="saveQuestion"}}
