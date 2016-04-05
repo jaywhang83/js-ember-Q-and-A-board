@@ -1,10 +1,10 @@
-<h1>Welcome to Q and A</h1>
+<h4>Welcome to Q and A</h4>
 
 Ask question and get answers!!!
 
 <ul>
   {{#each model as |question|}}
-    {{question-tile question=question update="update" destroyQuestion="destroyQuestion"}}
+    <h5>{{#link-to 'question' question.id}}{{question.title}}<br>{{question.author}}{{/link-to}}</h5>
   {{/each}}
 </ul>
 

@@ -18,9 +18,9 @@
           {{textarea value=notes id="notes" placeholder=question.notes}}
         </div>
 
-        <button {{action 'update' question}}>Save</button>
+        <button class="waves-effect waves-light btn green" {{action 'update' question}}>Save</button>
       </form>
     </div>
 {{else}}
-    <button {{action 'updateQuestionForm'}}>Update</button>
+    <button class="waves-effect waves-light btn blue" {{action 'updateQuestionForm'}}>Update</button>
 {{/if}}
