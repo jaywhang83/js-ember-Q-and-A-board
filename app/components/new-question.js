@@ -14,7 +14,11 @@ export default Ember.Component.extend({
         notes: this.get('notes') ? this.get('author') : "",
       };
       this.set('addNewQuestion', false);
-      this.sendAction('saveQuestion', params)
+      this.sendAction('saveQuestion', params);
+    },
+
+    formHide() {
+      this.set('addNewQuestion', false);
     }
   }
 });

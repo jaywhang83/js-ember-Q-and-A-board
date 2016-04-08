@@ -3,3 +3,8 @@
 {{question-detail question=model destroyQuestion="destroyQuestion"}}
 <br>
 {{update-question question=model update="update"}}
+{{new-answer saveAnswer="saveAnswer" question=model}}
+
+{{#each model.answers as |answer|}}
+  <li>{{answer-tile answer=answer}}</li>
+{{/each}}
