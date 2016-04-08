@@ -15,14 +15,13 @@
        </div>
      </div>
      <div class="row">
-      <div class="row">
-        <div class="input-field col s12">
-          <label for="notes">Detail notes</label>
-          {{textarea value=notes id="notes" class="materialize-textarea"}}
-        </div>
+      <div class="input-field col s12">
+        <label for="notes">Detail notes</label>
+        {{textarea value=notes id="notes" class="materialize-textarea"}}
       </div>
     </div>
       <button class="waves-effect waves-light btn green" {{action 'saveQuestion'}}>Save</button>
+      <button class="waves-effect waves-light btn green" {{action 'formHide'}}>Cancel</button>
    </form>
  </div>
 {{else}}

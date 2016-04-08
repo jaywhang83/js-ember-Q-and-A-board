@@ -4,9 +4,9 @@ export default Ember.Component.extend({
   upDateAnswerForm: false,
 
   actions: {
-    update(answer, params) {
-      this.sendAction('update', answer, params);
-    },
+    // update(answer, params) {
+    //   this.sendAction('update', answer, params);
+    // },
 
     delete(answer) {
       if(confirm('Are you sure you want to delete this answer?')) {

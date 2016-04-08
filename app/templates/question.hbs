@@ -6,6 +6,7 @@
 <br>
 {{new-answer saveAnswer="saveAnswer" question=model}}
 
+<p>Answers:</p>
 {{#each model.answers as |answer|}}
   <li>{{answer-tile answer=answer}}</li>
 {{/each}}

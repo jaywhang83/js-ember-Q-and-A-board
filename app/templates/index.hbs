@@ -4,12 +4,7 @@ Ask question and get answers!!!
 <h5>Questions</h5>
 <ul>
   {{#each model.questions as |question|}}
-    <h5>{{#link-to 'question' question.id}}{{question.title}}<br>{{question.author}}{{/link-to}}</h5>
+    {{question-tile question=question}}
   {{/each}}
 </ul>
 {{new-question saveQuestion="saveQuestion"}}
-
-
-<!-- {{#each model.answers as |answer|}}
-  <li>{{answer-tile answer=answer}}</li>
-{{/each}} -->
