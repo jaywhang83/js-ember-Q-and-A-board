@@ -13,5 +13,13 @@
     "title": "Spain?",
     "author": "Sara",
     "notes": "Best cities to visit in Spain?"
+  }],
+  "answers": [{
+      "author": "Sam",
+      "content": "This is the test answer"
+  },
+  {
+      "author": "Joey",
+      "content": "This is a sample answer"
   }]
 }

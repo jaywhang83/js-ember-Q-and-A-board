@@ -1,0 +1,24 @@
+{{#if addNewAnswer}}
+  <h4>New Answer</h4>
+  <div class="row">
+   <form class="col s12">
+     <div class="row">
+       <div class="input-field col s6">
+         <label for="author">Author</label>
+         {{input value=author id="author"}}
+       </div>
+     </div>
+     <div class="row">
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="content">Answer</label>
+          {{textarea value=content id="content" class="materialize-textarea"}}
+        </div>
+      </div>
+    </div>
+      <button class="waves-effect waves-light btn green" {{action 'saveAnswer'}}>Save</button>
+   </form>
+ </div>
+{{else}}
+  <button class="waves-effect waves-light btn"{{action 'answerFormShow'}}>New Answer</button>
+{{/if}}
