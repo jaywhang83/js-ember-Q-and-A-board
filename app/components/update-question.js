@@ -2,6 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   updateQuestionForm: false,
+
+  didInsertElement: function() {
+    $('.tooltipped').tooltip({delay: 50});
+  },
+
   actions: {
     updateQuestionForm() {
       this.set('updateQuestionForm', true);

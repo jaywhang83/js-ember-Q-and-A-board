@@ -21,11 +21,11 @@
         {{textarea value=notes id="notes" class="materialize-textarea"}}
       </div>
     </div>
-      <button class="waves-effect waves-light btn green" {{action 'saveQuestion'}}>Save</button>
-      <button  class="waves-effect waves-light btn green" {{action 'formHide'}}>Cancel</button>
+      <button class="btn-floating btn-large green tooltipped btn tooltipped" data-position="right" data-delay="50" data-tooltip="Save" {{action 'saveQuestion'}}>Save</button>
+      <button  class="btn-floating btn-large blue tooltipped btn tooltipped" data-position="right" data-delay="50" data-tooltip="Cancel" {{action 'formHide'}}>Cancel</button>
    </form>
  </div>
  </div>
 {{else}}
-  <button data-target="modal1" class="waves-effect waves-light btn modal-trigger" {{action 'questionFormShow'}}>New Question</button>
+  <button data-target="modal1" class="btn-floating btn-large btn modal-trigger tooltipped btn tooltipped" data-position="right" data-delay="50" data-tooltip="Add New Question" {{action 'questionFormShow'}}>New Question</button>
 {{/if}}

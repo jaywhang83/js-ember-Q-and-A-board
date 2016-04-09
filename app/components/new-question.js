@@ -2,6 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   addNewQuestion: false,
+
+  didInsertElement: function() {
+    $('.tooltipped').tooltip({delay: 50});
+  },
+
   actions: {
     questionFormShow() {
       this.set('addNewQuestion', true);

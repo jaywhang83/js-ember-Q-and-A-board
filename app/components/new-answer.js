@@ -2,6 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   addNewAnswer: false,
+
+    didInsertElement: function() {
+      $('.tooltipped').tooltip({delay: 50});
+    },
+
     actions: {
       answerFormShow() {
         this.set('addNewAnswer', true);
@@ -19,6 +24,7 @@ export default Ember.Component.extend({
 
       formHide() {
         this.set('addNewAnswer', false);
-      }
+      },
+
     }
 });
