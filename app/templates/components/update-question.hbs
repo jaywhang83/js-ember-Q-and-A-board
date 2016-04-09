@@ -6,21 +6,21 @@
        <div class="input-field col s6">
          <label for="author">Author</label>
          <br>
-         {{input value=author id="author" placeholder=question.author}}
+         {{input value=question.author id="author" placeholder=question.author}}
        </div>
      </div>
      <div class="row">
        <div class="input-field col s12">
          <label for="title">Question</label>
          <br>
-         {{input value=title id="title" placeholder=question.title}}
+         {{input value=question.title id="title" placeholder=question.title}}
        </div>
      </div>
      <div class="row">
       <div class="input-field col s12">
         <label for="notes">notes</label>
         <br>
-        {{textarea value=notes id="notes" placeholder=question.notes class="materialize-textarea"}}
+        {{textarea value=question.notes id="notes" placeholder=question.notes class="materialize-textarea"}}
       </div>
     </div>
       <button class="waves-effect waves-light btn green" {{action 'update' question}}>Save</button>
