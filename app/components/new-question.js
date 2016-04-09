@@ -19,6 +19,6 @@ export default Ember.Component.extend({
 
     formHide() {
       this.set('addNewQuestion', false);
-    }
+    },
   }
 });

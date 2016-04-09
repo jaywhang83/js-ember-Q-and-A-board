@@ -1,11 +1,15 @@
 
 {{#each favoriteList.favorites as |favorite|}}
-
-<ul class="collapsible popout" data-collapsible="accordion">
-  <li>
-    <div class="collapsible-header" {{action 'pressed'}}><i class="material-icons"></i>{{favorite.author}}</div>
-    <div class="collapsible-body"><p>{{favorite.content}}</p></div>
-  </li>
-</ul>
-
+  <ul class="collapsible popout" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header">
+        <div class="chip">
+          {{favorite.author}}
+        </div>
+      </div>
+      <div class="collapsible-body">
+        <p>{{favorite.content}}</p>
+      </div>
+    </li>
+  </ul>
 {{/each}}
