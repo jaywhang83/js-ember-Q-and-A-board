@@ -4,7 +4,9 @@ export default Ember.Route.extend({
   model(params) {
     return this.store.findRecord('question', params.question_id);
   },
-
+  didInsertElement: function() {
+    $('.modal-trigger').leanModal();
+  },
 
   actions: {
     update(question, params) {

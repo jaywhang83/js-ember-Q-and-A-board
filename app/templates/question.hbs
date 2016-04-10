@@ -1,9 +1,12 @@
 <h4>More detail about {{model.author}}'s question:</h4>
 <!-- To delete -->
-<div class="row">
-  <div class="col s1">{{question-detail question=model destroyQuestion="destroyQuestion"}}</div>
-  <div class="col s1 test1 update">{{update-question question=model update="update"}}</div>
-  <div class="col s1 test1">{{new-answer saveAnswer="saveAnswer" question=model}}</div>
+{{question-detail question=model destroyQuestion="destroyQuestion"}}
+{{update-question question=model update="update"}}
+<button data-target="modal1" class="btn modal-trigger btn-floating btn-large">New</button>
+<div id="modal1" class="modal">
+  <div class="modal-content">
+{{new-answer saveAnswer="saveAnswer" question=model}}
+</div>
 </div>
 <p>Answers:</p>
 {{#each model.answers as |answer|}}

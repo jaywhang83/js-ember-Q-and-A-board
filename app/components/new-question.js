@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  addNewQuestion: false,
+  addNewQuestion: true,
 
   didInsertElement: function() {
     $('.modal-trigger').leanModal();

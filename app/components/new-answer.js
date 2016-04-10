@@ -1,11 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  addNewAnswer: false,
+  addNewAnswer: true,
 
-    didInsertElement: function() {
-      $('.tooltipped').tooltip({delay: 50});
-    },
+  didInsertElement: function() {
+    $('.modal-trigger').leanModal();
+  },
+
+    // didInsertElement: function() {
+    //   $('.tooltipped').tooltip({delay: 50});
+    // },
 
     actions: {
       answerFormShow() {
