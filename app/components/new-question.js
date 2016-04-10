@@ -4,7 +4,7 @@ export default Ember.Component.extend({
   addNewQuestion: false,
 
   didInsertElement: function() {
-    $('.tooltipped').tooltip({delay: 50});
+    $('.modal-trigger').leanModal();
   },
 
   actions: {

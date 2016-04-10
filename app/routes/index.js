@@ -8,6 +8,10 @@ export default Ember.Route.extend({
     });
   },
 
+  didInsertElement: function() {
+    $('.modal-trigger').leanModal();
+  },
+
   actions: {
     saveQuestion(params) {
       var newQuestion = this.store.createRecord('question', params);
