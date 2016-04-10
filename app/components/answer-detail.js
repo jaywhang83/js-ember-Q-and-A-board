@@ -12,6 +12,14 @@ export default Ember.Component.extend({
 
     addToFavorite(favorite) {
       this.get('favoriteList').add(favorite);
+    },
+
+    increaseRating(answer) {
+      this.sendAction('increaseRating', answer);
+    },
+
+    decreaseRating(answer) {
+      this.sendAction('decreaseRating', answer);
     }
   }
 });

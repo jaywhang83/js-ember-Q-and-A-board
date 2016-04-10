@@ -38,6 +38,20 @@ export default Ember.Route.extend({
         return question.save();
       });
       this.transitionTo('question', params.question);
+    },
+
+    increaseRating(answer) {
+      var countForRating = answer.get('rating');
+      answer.set('rating', countForRating += 1);
+      answer.save();
+      this.transitionTo('question');
+    },
+
+    decreaseRating(answer) {
+      var countForRating = answer.get('rating');
+      answer.set('rating', countForRating -= 1);
+      answer.save();
+      this.transitionTo('question');
     }
   }
 });

@@ -10,5 +10,5 @@
 </div>
 <p>Answers:</p>
 {{#each model.answers as |answer|}}
-  {{answer-tile answer=answer}}
+  {{answer-tile answer=answer increaseRating="increaseRating" decreaseRating="decreaseRating"}}
 {{/each}}
