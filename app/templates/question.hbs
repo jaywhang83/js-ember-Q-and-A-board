@@ -2,8 +2,8 @@
 <!-- To delete -->
 <div class="row">
   <div class="col s1">{{question-detail question=model destroyQuestion="destroyQuestion"}}</div>
-  <div class="col s1">{{update-question question=model update="update"}}</div>
-  <div class="col s1">{{new-answer saveAnswer="saveAnswer" question=model}}</div>
+  <div class="col s1 test1 update">{{update-question question=model update="update"}}</div>
+  <div class="col s1 test1">{{new-answer saveAnswer="saveAnswer" question=model}}</div>
 </div>
 <p>Answers:</p>
 {{#each model.answers as |answer|}}
