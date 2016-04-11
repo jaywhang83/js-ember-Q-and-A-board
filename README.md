@@ -1,7 +1,20 @@
-# Q-and-a
+# Q-And-A
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This Ember app allows user to ask and answer any questions.
+
+#### By Jay Whang, 4/10/2016
+
+## Description
+
+This application allows user to add, edit, delete, and delete questions and answers. Answers are list by highest rating. Users can also rate answers and add answers to favorite list.
+
+## Technologies Used
+
+* Ember
+* JavaScript
+* Node / NPM
+* jQuery
+* Materialize
 
 ## Prerequisites
 
@@ -41,7 +54,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+N/A
 
 ## Further Reading / Useful Links
 
@@ -51,3 +64,12 @@ Specify what it takes to deploy your app.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+## Support and contact details
+
+For Support contact me at: jaywhang83@gmail.com
+
+### License
+
+The MIT License (MIT)
+
+Copyright (c) 2016 Jay Whang
