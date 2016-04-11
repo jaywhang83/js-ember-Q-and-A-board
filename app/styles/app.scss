@@ -1,6 +1,32 @@
 @import 'materialize';
 @import 'ember-cli-materialize';
 
-.card-panel:hover {
+.question:hover {
    text-shadow: 10px 10px 10px #000000;
+}
+
+.container {
+  margin: auto;
+  width: 60%;
+}
+
+.carousel {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.brand-logo {
+  margin-left: 20px;
+}
+
+.home {
+  margin-right: 20px;
+}
+
+.welcome {
+  text-decoration: underline;
 }

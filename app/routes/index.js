@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  displayFavorite: true,
+
   model() {
     return Ember.RSVP.hash({
       questions: this.store.findAll('question'),
@@ -18,5 +20,9 @@ export default Ember.Route.extend({
       newQuestion.save();
       this.transitionTo('index');
     },
+
+    // showFavorite() {
+    //   this.set('displayFavorite', true);
+    // },
   }
 });

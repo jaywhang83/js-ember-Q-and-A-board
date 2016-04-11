@@ -6,7 +6,7 @@ export default Ember.Component.extend({
   didInsertElement: function() {
     $('.tooltipped').tooltip({delay: 50});
   },
-  
+
   actions: {
     updateAnswerForm() {
       this.set('updateAnswerForm', true);
@@ -14,8 +14,9 @@ export default Ember.Component.extend({
 
     update(answer) {
       var params = {
-        author: this.get('author'),
-        content: this.get('content')
+        author: this.get('answer.author'),
+        content: this.get('answer.content'),
+        date: new Date()
       };
       this.set('updateAnswerForm', false);
       this.sendAction('update', answer, params);

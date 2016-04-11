@@ -18,18 +18,19 @@ export default Ember.Component.extend({
 
       saveAnswer() {
         var params ={
-          author: this.get('author'),
-          content: this.get('content'),
+          author: this.get('author') ? this.get('author') : "",
+          content: this.get('content') ? this.get('content') : "",
           question: this.get('question'),
           rating: 0,
+          date: new Date()
         };
-        this.set('addNewAnswer', false);
+        // this.set('addNewAnswer', false);
         this.sendAction('saveAnswer', params);
       },
 
-      formHide() {
-        this.set('addNewAnswer', false);
-      },
+      // formHide() {
+      //   this.set('addNewAnswer', false);
+      // },
 
     }
 });

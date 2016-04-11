@@ -2,29 +2,29 @@
 <div class="card-panel large">
   <h4>New Question</h4>
   <div class="row">
-   <form class="col s12">
-     <div class="row">
-       <div class="input-field col s6">
-         <label for="author">Author</label>
-         {{input value=author id="author"}}
-       </div>
-     </div>
-     <div class="row">
-       <div class="input-field col s12">
-         <label for="title">question</label>
-         {{input value=title id="title"}}
-       </div>
-     </div>
-     <div class="row">
-      <div class="input-field col s12">
-        <label for="notes">Detail notes</label>
-        {{textarea value=notes id="notes" class="materialize-textarea"}}
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <label for="author">Author</label>
+          {{input value=author id="author"}}
+        </div>
       </div>
-    </div>
-      <button class="btn-floating btn-large green tooltipped btn tooltipped" data-position="right" data-delay="50" data-tooltip="Save" {{action 'saveQuestion'}}>Save</button>
-      <button  class="btn-floating btn-large blue tooltipped btn tooltipped" data-position="right" data-delay="50" data-tooltip="Cancel" {{action 'formHide'}}>Cancel</button>
-   </form>
- </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="title">question</label>
+          {{input value=title id="title"}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="notes">Detail notes</label>
+          {{textarea value=notes id="notes" class="materialize-textarea"}}
+        </div>
+      </div>
+      <button class="waves-effect waves-light btn green" data-position="right" data-delay="50" data-tooltip="Save" {{action 'saveQuestion'}} {{action 'pressed'}}>Save</button>
+        <!-- <button class="waves-effect waves-light btn blue" data-position="right" data-delay="50" data-tooltip="Cancel" {{action 'formHide'}}>Cancel</button> -->
+    </form>
+  </div>
  </div>
 {{else}}
   <!-- <button data-target="modal1" class="btn-floating btn-large btn modal-trigger tooltipped btn tooltipped" data-position="right" data-delay="50" data-tooltip="Add New Question" {{action 'questionFormShow'}}>New Question</button> -->

@@ -1,25 +1,25 @@
 {{#if updateAnswerForm}}
   <h4>Update {{answer.author}}'s answer</h4>
   <div class="row">
-   <form class="col s12">
-     <div class="row">
-       <div class="input-field col s6">
-         <label for="author">Author</label>
-         <br>
-         {{input value=answer.author id="author" placeholder=answer.author}}
-       </div>
-     </div>
-     <div class="row">
-      <div class="input-field col s12">
-        <label for="content">Answer</label>
-        <br>
-        {{textarea value=answer.content id="content" placeholder=answer.content class="materialize-textarea"}}
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <label for="author">Author</label>
+          <br>
+          {{input value=answer.author id="author" placeholder=answer.author}}
+        </div>
       </div>
-    </div>
-      <button class="btn-floating btn-large green" {{action 'update' answer}}>Save</button>
-      <button class="btn-floating btn-large blue" {{action 'formHide'}}>Cancel</button>
-   </form>
- </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="content">Answer</label>
+          <br>
+          {{textarea value=answer.content id="content" placeholder=answer.content class="materialize-textarea"}}
+        </div>
+      </div>
+      <button class="waves-effect waves-light btn green" {{action 'update' answer}}>Save</button>
+      <button class="waves-effect waves-light btn blue" {{action 'formHide'}}>Cancel</button>
+    </form>
+  </div>
 {{else}}
-    <button class="btn-floating btn-large blue btn tooltipped" data-position="right" data-delay="50" data-tooltip="Edit answer"  {{action 'updateAnswerForm'}}><i class="large material-icons">mode_edit</i></button>
+  <button class="btn-floating btn-large blue blue btn tooltipped" data-position="right" data-delay="50" data-tooltip="Edit answer"  {{action 'updateAnswerForm'}}><i class="large material-icons">mode_edit</i></button>
 {{/if}}

@@ -1,19 +1,24 @@
-<h4>Welcome to Q and A</h4>
-
-<h5>Ask question and get answers!!!</h5>
-
+<div class="title">
+  <h4 class="welcome">Welcome to Q and A</h4>
+  <h5>Ask question and get answers!!!</h5>
+</div>
 <div class="row">
   <div class= "col s6">
     <h5>Questions</h5>
     <ul>
       {{#each model.questions as |question|}}
+      <div class="question">
         {{question-tile question=question}}
+      </div>
       {{/each}}
     </ul>
-    <button data-target="modal1" class="btn modal-trigger">Add new Question</button>
+    <div class="fixed-action-btn horizontal" style="top: 100px; right: 50px;">
+      <button data-target="modal1" class="btn-floating btn-large modal-trigger">New</button>
+      <button class="btn-floating btn-large">Fav</button>
+    </div>
   </div>
+
   <div class="col s6">
-    <h5>Favorite Answers</h5>
     {{display-favorite}}
   </div>
 
@@ -22,5 +27,5 @@
       <h4>New Question</h4>
       {{new-question saveQuestion="saveQuestion"}}
     </div>
- </div>
+  </div>
 </div>

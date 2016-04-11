@@ -4,6 +4,7 @@ export default Ember.Route.extend({
   model(params) {
     return this.store.findRecord('question', params.question_id);
   },
+
   didInsertElement: function() {
     $('.modal-trigger').leanModal();
   },
@@ -52,6 +53,12 @@ export default Ember.Route.extend({
       answer.set('rating', countForRating -= 1);
       answer.save();
       this.transitionTo('question');
-    }
+    },
+
+    delete(question) {
+      if(confirm('Are you sure you want to delete this rental?')) {
+        this.sendAction('destroyQuestion', question);
+      }
+    },
   }
 });

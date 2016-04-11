@@ -4,7 +4,7 @@ export default Ember.Component.extend({
   updateQuestionForm: false,
 
   didInsertElement: function() {
-    $('.tooltipped').tooltip({delay: 50});
+    $('.modal-trigger').leanModal();
   },
 
   actions: {
@@ -14,9 +14,10 @@ export default Ember.Component.extend({
 
     update(question) {
       var params = {
-        title: this.get('title'),
-        author: this.get('author'),
-        notes: this.get('notes')
+        title: this.get('question.title'),
+        author: this.get('question.author'),
+        notes: this.get('question.notes'),
+        date: new Date(),
       };
       this.set('updateQuestionForm', false);
       this.sendAction('update', question, params);

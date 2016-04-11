@@ -1,14 +1,24 @@
 <h4>More detail about {{model.author}}'s question:</h4>
-<!-- To delete -->
-{{question-detail question=model destroyQuestion="destroyQuestion"}}
+
 {{update-question question=model update="update"}}
-<button data-target="modal1" class="btn modal-trigger btn-floating btn-large">New</button>
+
+{{question-detail question=model destroyQuestion="destroyQuestion"}}
+<div class="row">
+  <div class="col s6 offset-s12">
+    <button data-target="modal1" class="btn modal-trigger btn-floating btn-large">New</button>
+  </div>
+</div>
 <div id="modal1" class="modal">
   <div class="modal-content">
-{{new-answer saveAnswer="saveAnswer" question=model}}
+    {{new-answer saveAnswer="saveAnswer" question=model}}
+  </div>
 </div>
-</div>
-<p>Answers:</p>
-{{#each model.answers as |answer|}}
+
+
+
+<!-- {{#each model.answers as |answer|}}
+<div class="section">
   {{answer-tile answer=answer increaseRating="increaseRating" decreaseRating="decreaseRating"}}
-{{/each}}
+</div>
+<div class="divider"></div>
+{{/each}} -->

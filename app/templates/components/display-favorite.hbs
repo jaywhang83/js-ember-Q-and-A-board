@@ -1,10 +1,10 @@
-
+<!-- <h5>Favorite Answers</h5>
 {{#each favoriteList.favorites as |favorite|}}
   <ul class="collapsible popout" data-collapsible="accordion">
     <li>
       <div class="collapsible-header">
         <div class="chip">
-          {{favorite.author}}
+          {{favorite.author}} {{favorite.date}}
         </div>
       </div>
       <div class="collapsible-body">
@@ -12,4 +12,17 @@
       </div>
     </li>
   </ul>
-{{/each}}
+{{/each}} -->
+
+<div class="carousel">
+  <h5>Favorites</h5>
+  {{#each favoriteList.favorites as |favorite|}}
+  <span class="carousel-item">
+    <div class="card-panel">
+      {{favorite.author}}
+      {{favorite.date}}
+      <p>{{favorite.content}}</p>
+    </div>
+  </span>
+  {{/each}}
+</div>
