@@ -18,10 +18,12 @@
   <h5>Favorites</h5>
   {{#each favoriteList.favorites as |favorite|}}
   <span class="carousel-item">
-    <div class="card-panel">
-      {{favorite.author}}
-      {{favorite.date}}
-      <p>{{favorite.content}}</p>
+    <div class="col s12 m12 z-depth-4 fav-display">
+      <span class="fav-content flow-text">
+        {{favorite.author}}
+        {{favorite.date}}
+        {{favorite.content}}
+      </span>
     </div>
   </span>
   {{/each}}
