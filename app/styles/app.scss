@@ -1,8 +1,9 @@
 @import 'materialize';
 @import 'ember-cli-materialize';
 
-.question:hover {
-   text-shadow: 10px 10px 10px #000000;
+.questions:hover {
+  //  text-shadow: 10px 10px 10px #000000;
+  @extend .z-depth-5;
 }
 
 .container {
